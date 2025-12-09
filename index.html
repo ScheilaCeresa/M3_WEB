@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Cadastro de Dívidas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>Gestão de Dívidas</h1>
+
+<form id="formDivida" enctype="multipart/form-data">
+    <h2>Cliente:</h2>
+    <input type="text" name="nome" placeholder="Nome" required>
+    <input type="text" name="cpf" placeholder="CPF" required>
+    <input type="email" name="email" placeholder="Email" required>
+
+    <h3>Endereço (Opcional):</h3>
+    <input type="text" name="cep" placeholder="CEP">
+    <input type="text" name="numero" placeholder="Número">
+    <input type="text" name="complemento" placeholder="Complemento">
+
+    <h2>Dívida:</h2>
+    <input type="number" name="valor" placeholder="Valor" required>
+    <input type="text" name="descricao" placeholder="Descrição" required>
+
+    <select name="situacao" required>
+        <option value="">Situação...</option>
+        <option value="Pendente">Pendente</option>
+        <option value="Pago">Pago</option>
+    </select>
+
+    <input type="text" name="processo" placeholder="Número do Processo (opcional)">
+    <input type="file" name="comprovante" accept="application/pdf">
+
+    <button type="submit">Cadastrar</button>
+</form>
+
+<hr>
+
+<h2>Lista de Dívidas</h2>
+<div id="listaDividas"></div>
+
+<script src="app.js"></script>
+</body>
+</html>
