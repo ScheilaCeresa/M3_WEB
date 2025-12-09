@@ -11,27 +11,29 @@
 
 <form id="formDivida" enctype="multipart/form-data">
     <h2>Cliente:</h2>
-    <input type="text" name="nome" placeholder="Nome" required>
-    <input type="text" name="cpf" placeholder="CPF" required>
-    <input type="email" name="email" placeholder="Email" required>
+
+    <input id="nome" type="text" name="nome" placeholder="Nome" required>
+    <input id="cpf" type="text" name="cpf" placeholder="CPF" required>
+    <input id="email" type="email" name="email" placeholder="Email" required>
 
     <h3>Endereço (Opcional):</h3>
-    <input type="text" name="cep" placeholder="CEP">
-    <input type="text" name="numero" placeholder="Número">
-    <input type="text" name="complemento" placeholder="Complemento">
+    <input id="cep" type="text" name="cep" placeholder="CEP">
+    <input id="numero" type="text" name="numero" placeholder="Número">
+    <input id="complemento" type="text" name="complemento" placeholder="Complemento">
 
     <h2>Dívida:</h2>
-    <input type="number" name="valor" placeholder="Valor" required>
-    <input type="text" name="descricao" placeholder="Descrição" required>
 
-    <select name="situacao" required>
+    <input id="valor" type="number" name="valor" placeholder="Valor" required>
+    <input id="objeto" type="text" name="objeto" placeholder="Descrição" required>
+
+    <select id="situacao" name="situacao" required>
         <option value="">Situação...</option>
         <option value="Pendente">Pendente</option>
         <option value="Pago">Pago</option>
     </select>
 
-    <input type="text" name="processo" placeholder="Número do Processo (opcional)">
-    <input type="file" name="comprovante" accept="application/pdf">
+    <input id="processo" type="text" name="processo" placeholder="Número do Processo (opcional)">
+    <input id="comprovante" type="file" name="comprovante" accept="application/pdf">
 
     <button type="submit">Cadastrar</button>
 </form>
@@ -39,7 +41,22 @@
 <hr>
 
 <h2>Lista de Dívidas</h2>
-<div id="listaDividas"></div>
+
+<table>
+    <thead>
+        <tr>
+            <th>Nome</th>
+            <th>CPF</th>
+            <th>Valor</th>
+            <th>Descrição</th>
+            <th>Situação</th>
+            <th>Ações</th>
+        </tr>
+    </thead>
+    <tbody id="tabelaDividas"></tbody>
+</table>
+
+<br><br>
 
 <script src="app.js"></script>
 </body>

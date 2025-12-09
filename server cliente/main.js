@@ -86,26 +86,33 @@ async function carregarDividas() {
 }
 
 function listarLocal() {
-    const tabela = document.getElementById("tabelaDividas");
-    tabela.innerHTML = "";
+    const tabela1 = document.getElementById("tabelaDividas");
+    const tabela2 = document.getElementById("tabelaDividas2");
+
+    tabela1.innerHTML = "";
+    tabela2.innerHTML = "";
+
     const lista = JSON.parse(localStorage.getItem("dividas") || "[]");
 
     lista.forEach(divida => {
-        const tr = document.createElement("tr");
-
-        tr.innerHTML = `
-            <td>${divida.cliente.nome}</td>
-            <td>${divida.cliente.cpf}</td>
-            <td>${divida.valor}</td>
-            <td>${divida.objeto}</td>
-            <td>${divida.situacao}</td>
-            <td>
-                <button onclick="excluirDivida(${divida.id})" class="btnExcluir">Excluir</button>
-            </td>
+        const linha = `
+            <tr>
+                <td>${divida.cliente.nome}</td>
+                <td>${divida.cliente.cpf}</td>
+                <td>${divida.valor}</td>
+                <td>${divida.objeto}</td>
+                <td>${divida.situacao}</td>
+                <td>
+                    <button onclick="excluirDivida(${divida.id})" class="btnExcluir">Excluir</button>
+                </td>
+            </tr>
         `;
-        tabela.appendChild(tr);
+
+        tabela1.innerHTML += linha;
+        tabela2.innerHTML += linha;
     });
 }
+
 
 async function excluirDivida(id) {
     try {
