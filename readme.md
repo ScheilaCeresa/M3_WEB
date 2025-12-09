@@ -29,18 +29,19 @@ Cliente
 
 Rodar código
 
-Acessar a pasta: cd "server http"
+- Acessar a pasta: cd "server_http"
 
-Dentro da pasta "server http":  node server.js
+- Dentro da pasta "server_http":  node server.js
 
-Na Web acessar a porta 4500: http://localhost:4500/
+- Na Web acessar a porta 4500: http://localhost:4500/
+- Ou localmente a pasta index.html
 
 
 Instalar Dependências: 
 
-npm init -y
+- npm init -y
 
-npm install express cors multer@2
+- npm install express cors multer@2
 
 
 
