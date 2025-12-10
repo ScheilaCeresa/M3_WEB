@@ -77,7 +77,7 @@ Rodar código
 
 - Dentro da pasta "server_http":  node server.js
 
-- Na Web acessar a porta 4500: http://localhost:4500/
+- Na Web acessar fazendo abertura pelo VS Code, em live server http://127.0.0.1:5500
 - Ou localmente a pasta index.html
 
 

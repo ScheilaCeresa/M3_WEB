@@ -1,63 +1,56 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <title>Cadastro de Dívidas</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <title>Cadastro de Dívidas</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-
-<h1>Gestão de Dívidas</h1>
+  <h1>Gestão de Dívidas</h1>
 
 <form id="formDivida" enctype="multipart/form-data">
     <h2>Cliente:</h2>
-
-    <input id="nome" type="text" name="nome" placeholder="Nome" required>
-    <input id="cpf" type="text" name="cpf" placeholder="CPF" required>
-    <input id="email" type="email" name="email" placeholder="Email" required>
+    <input id="nome" name="nome" type="text" placeholder="Nome" required />
+    <input id="cpf" name="cpf" type="text" placeholder="CPF" required />
+    <input id="email" name="email" type="email" placeholder="Email" required />
 
     <h3>Endereço (Opcional):</h3>
-    <input id="cep" type="text" name="cep" placeholder="CEP">
-    <input id="numero" type="text" name="numero" placeholder="Número">
-    <input id="complemento" type="text" name="complemento" placeholder="Complemento">
+    <input id="cep" name="cep" type="text" placeholder="CEP" />
+    <input id="numero" name="numero" type="text" placeholder="Número" />
+    <input id="complemento" name="complemento" type="text" placeholder="Complemento" />
 
     <h2>Dívida:</h2>
-
-    <input id="valor" type="number" name="valor" placeholder="Valor" required>
-    <input id="objeto" type="text" name="objeto" placeholder="Descrição" required>
-
+    <input id="valor" name="valor" type="number" step="0.01" placeholder="Valor" required />
+    <input id="objeto" name="objeto" type="text" placeholder="Descrição" required />
     <select id="situacao" name="situacao" required>
-        <option value="">Situação...</option>
-        <option value="Pendente">Pendente</option>
-        <option value="Pago">Pago</option>
+      <option value="">Situação...</option>
+      <option value="Pendente">Pendente</option>
+      <option value="Pago">Pago</option>
     </select>
 
-    <input id="processo" type="text" name="processo" placeholder="Número do Processo (opcional)">
-    <input id="comprovante" type="file" name="comprovante" accept="application/pdf">
+    <input id="processo" name="processo" type="text" placeholder="Número do Processo (opcional)" />
+    <input id="comprovante" name="comprovante" type="file" accept="application/pdf" />
 
     <button type="submit">Cadastrar</button>
-</form>
+  </form>
 
-<hr>
+  <hr />
 
-<h2>Lista de Dívidas</h2>
-
-<table>
+  <h2>Lista de Dívidas</h2>
+  <table>
     <thead>
-        <tr>
-            <th>Nome</th>
-            <th>CPF</th>
-            <th>Valor</th>
-            <th>Descrição</th>
-            <th>Situação</th>
-            <th>Ações</th>
-        </tr>
+      <tr>
+        <th>Nome</th>
+        <th>CPF</th>
+        <th>Valor</th>
+        <th>Descrição</th>
+        <th>Situação</th>
+        <th>Ações</th>
+      </tr>
     </thead>
     <tbody id="tabelaDividas"></tbody>
-</table>
+  </table>
 
-<br><br>
-
-<script src="app.js"></script>
+  <script src="app.js"></script>
 </body>
 </html>
