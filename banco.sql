@@ -1,10 +1,3 @@
-const db = mysql.createConnection({
-    host: "localhost",
-    user: "root",
-    password: "senha",
-    database: "dividas_db"
-});
-
 CREATE DATABASE IF NOT EXISTS dividas_db
     DEFAULT CHARACTER SET utf8mb4
     COLLATE utf8mb4_general_ci;
@@ -30,6 +23,6 @@ SELECT * FROM dividas;
 
 DESCRIBE dividas;
 
+create user server identified by "Senha@123";
 
-
-
+grant all privileges on divida_db to server;

@@ -11,8 +11,8 @@ app.use(express.static("/home/joao/Área de trabalho/M3_WEB/server cliente"));
 
 const db = mysql.createConnection({
   host: "localhost",
-  user: "root",
-  password: "Mag27081*",
+  user: "server",
+  password: "Senha@123",
   database: "dividas_db"
 });
 
