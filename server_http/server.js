@@ -7,11 +7,12 @@ const mysql = require("mysql2");
 const app = express();
 app.use(express.json());
 app.use(cors());
+app.use(express.static("/home/joao/Área de trabalho/M3_WEB/server cliente"));
 
 const db = mysql.createConnection({
   host: "localhost",
   user: "root",
-  password: "Patifaria7#",
+  password: "Mag27081*",
   database: "dividas_db"
 });
 
@@ -85,3 +86,8 @@ app.delete("/dividas/:id", (req, res) => {
 });
 
 app.listen(4500, () => console.log("Servidor rodando na porta 4500"));
+
+
+app.get("/", (req,res) => {
+  res.sendFile("index.html")
+})
